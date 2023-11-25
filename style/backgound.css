@@ -1,0 +1,25 @@
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+/* inset para acertar os eixos - com 0 pega os 4 lados */
+/* z-index: -1 para jogar o video para ultimo plano */
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* object-fit: cover para fazer um corte correto do vídeo */
+#background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
